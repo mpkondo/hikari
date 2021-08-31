@@ -1,0 +1,590 @@
+.wrap{
+    margin: 0 auto;
+    width: 100%;
+}
+header{
+  margin: 0 auto;
+}
+.bold{
+    font-weight: bold;
+}
+header,.wrap{
+    width: 1366px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.header-wrap .logo,.f-left .logo{
+    width: 240px;
+}
+.heading{
+    font-size: 40px;
+    color: #313677;
+    letter-spacing: 3.2px;
+    line-height: 0.7;
+    font-family: 'Oswald', sans-serif;
+}
+.sub-heading{
+    letter-spacing: 0.32px;
+    font-size: 16px;
+    font-family: 'Noto Sans JP';
+    color: #232329;
+    font-weight: bold;
+}
+.btn{
+  background: #EBCD27;
+  display: block;
+  width: 208px;
+  height: 48px;
+  line-height: 48px;
+  color: #fff;
+  box-shadow: 0px 0px 24px #00000027;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 25px;
+}
+/* メニュー
+------------------------------------------------------------*/
+.header-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px #0000001A;
+}
+.menu ul{
+    display: flex;
+}
+.menu ul li{
+  line-height: 73px;
+}
+.menu ul li a{
+    padding: 24px;
+}
+.menu ul li .recruit,.menu ul li .contact{
+  display: inline-block;
+  width: 160px;
+  text-align: center;
+  padding: 0;
+}
+.menu ul li .recruit{
+    background: #EBCD27;
+    color: #313677;
+}
+.menu ul li .contact{
+    background: #313677;
+    color: #fff;
+}
+/* パンくず
+------------------------------------------------------------*/
+.breadcrumb {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: 115px;
+  margin-top: 16px;
+}
+
+.breadcrumb li {
+  display: inline;
+  list-style: none;
+  font-weight: bold;
+  font-family: 'Noto Sans JP';
+}
+
+.breadcrumb li:after {
+  padding: 0 0.2em;
+  color: #555;
+  content: '>';
+}
+.breadcrumb li:last-child::after{
+    content:'';
+}
+
+.breadcrumb li:last-child:before{
+  color: #333333;
+  content: '';
+}
+
+.breadcrumb li a {
+  color: #333333;
+  text-decoration: underline;
+}
+
+.breadcrumb li a:hover {
+  text-decoration: none;
+}
+/* ハンバーガー
+------------------------------------------------------------*/
+.hamburger{
+    display : block;
+    position: fixed;
+    z-index : 3;
+    right : 0;
+    top   : 0;
+    width : 64px;
+    height: 64px;
+    cursor: pointer;
+    text-align: center;
+    background: #313677;
+    display: none;
+  }
+
+  .hamburger span {
+    display : block;
+    position: absolute;
+    width   : 40px;
+    height  : 2px ;
+    left    : 12px;
+    background : #fff;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition   : 0.3s ease-in-out;
+    transition        : 0.3s ease-in-out;
+  }
+  .hamburger span:nth-child(1) {
+    top: 20px;
+  }
+  .hamburger span:nth-child(2) {
+    top: 31px;
+  }
+  .hamburger span:nth-child(3) {
+    top: 42px;
+  }
+  
+  /* ナビ開いてる時のボタン */
+  .hamburger.active span:nth-child(1) {
+    top : 32px;
+    left: 10px;
+    background :#fff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform   : rotate(-45deg);
+    transform        : rotate(-45deg);
+  }
+  
+  .hamburger.active span:nth-child(2),
+  .hamburger.active span:nth-child(3) {
+    top: 32px;
+    background :#fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform   : rotate(45deg);
+    transform        : rotate(45deg);
+  }
+  
+  nav.globalMenuSp {
+    position: fixed;
+    z-index : 2;
+    top  : 0;
+    right : 0;
+    color: #fff;
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    width: 80%;
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+    display: none;
+  }
+  nav.globalMenuSp ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    margin-top: 50px;
+  }
+  
+  nav.globalMenuSp ul li {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    transition: .4s all;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  nav.globalMenuSp ul li:first-child {
+    margin-top: 73px;
+  }
+  nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+  }
+  nav.globalMenuSp ul li:hover{
+    background :#ddd;
+  }
+  nav.globalMenuSp ul li a {
+    display: block;
+    color: #fff;
+    padding: 16px 0;
+    text-decoration :none;
+  }
+  nav.globalMenuSp.active {
+    opacity: 100;
+    background: #313677;
+    display: block;
+    height: 100%;
+    overflow: auto;
+  }
+  .hum-btn-wrap{
+      display: flex;
+      justify-content: center;
+      width: 320px;
+      height: 67px;
+      margin: 0 auto;
+      background: #fff;
+      color: #313677;
+      border-radius: 10px;
+      text-align: center;
+      align-items: center;
+      margin-top: 67px;
+      margin-bottom: 21px;
+  }
+  .hum-shop-txt{
+      font-size: 13px;
+      font-weight: bold;
+  }
+  .hum-here-txt{
+      font-size: 17px;
+      font-weight: bold;
+  }
+  .hum-btn{
+      margin-left: 5px;
+      margin-right: 5px;
+  }
+/* slider
+------------------------------------------------------------*/
+.slider-wrap{
+    position: relative;
+    width: 1366px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.slider-txt{
+    position: absolute;
+    left: 115px;
+    bottom: 56px;
+}
+.slider-main-txt,.slider-sub-txt{
+    text-shadow: 0px 0px 20px #00000067;
+    color: #fff;
+}
+.slider-main-txt{
+    font-size: 56px;
+}
+.slider-sub-txt{
+    font-size: 24px;
+
+}
+/* six-pic
+------------------------------------------------------------*/
+.six-pic{
+  display: flex;
+  width: 1366px;
+  max-width: 100%;
+}
+/* news
+------------------------------------------------------------*/
+.news-inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.news-box{
+  /* width: 800px;
+  max-width: 100%; */
+  margin: 80px 0;
+  margin-left: 64px;
+}
+.news-box ul li ul{
+  padding: 25px 0;
+  display: flex;
+  border-bottom: 2px solid #EDEEF5;
+}
+/* .news-box ul li ul :not(:last-child){
+  border-bottom: 2px solid #EDEEF5;
+} */
+.news-box .day{
+    font-size: 14px;
+    color: #313677;
+    letter-spacing: 1.4px;
+    margin-right: 12px;
+}
+.news-box .cat{
+    font-size: 12px;
+    color: #fff;
+    letter-spacing: 0.24px;
+    background: #EBCD27;
+    width: 100px;
+    margin-right: 12px;
+    text-align: center;
+    line-height: 25px;
+}
+.news-box .news-txt{
+}
+
+/* about us
+------------------------------------------------------------*/
+.about-heading{
+  margin: 80px 0 40px;
+  text-align: center;
+}
+.about-txt{
+  width: 752px;
+  max-width: 100%;
+  margin: 0 auto;
+  letter-spacing: 0.32px;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+/* face insta
+------------------------------------------------------------*/
+.face-insta-btn{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.face-insta-btn img{
+    width: 32px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.six-pic img{
+    /* width: 227px; */
+}
+.facebook,.instagram{
+  display: block;
+  width: 464px;
+  height: 115px;
+  line-height: 115px;
+  text-align: center;
+  border: 4px solid #313677;
+  font-size: 18px;
+}
+.facebook{
+  margin-right: 8px;
+}
+.instagram{
+  margin-left: 8px;
+}
+/* footer
+------------------------------------------------------------*/
+.zip{
+  font-size: 14px;
+}
+.add{
+  margin-bottom: 5px;
+}
+.footer-inner{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 64px;
+  border-top: 2px solid #EDEEF5;
+  width: 1136px;
+  max-width: 100%;
+}
+.f-right{
+  position: relative;
+}
+.hogo-map{
+  text-align: right;
+  margin-top: 26px;
+}
+.hogo{
+  margin-right: 32px;
+}
+.footer-logo{
+  margin: 12px 0;
+}
+.copy{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: max-content;
+}
+/* page
+------------------------------------------------------------*/
+.p_slider-main-txt{
+  font-family: 'Oswald', sans-serif;
+}
+.p_slider-sub-txt{
+  font-size: 16px;
+}
+.p_slider-txt{
+  top: 25%;
+}
+.post{
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.post p{
+  color: #444444;
+}
+.post .p_txt{
+  letter-spacing: 0.48px;
+  line-height: 2;
+  margin: 34px 0;
+}
+.post h1{
+  background: #313677;
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 0.48px;
+  height: 52px;
+  line-height: 52px;
+}
+.post h2{
+  font-size: 24px;
+  padding: 0.25em 0.5em;
+  border-left: solid 5px #313677;
+  letter-spacing: 0.48px;
+  font-weight: bold;
+}
+.post h3{
+  font-size: 20px;
+  color: #313677;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+}
+@media screen and (max-width:768px){
+  .heading{
+    text-align: center;
+    margin-top: 64px;
+  }
+/* header
+------------------------------------------------------------*/
+.menu{
+  display: none;
+}
+.header-wrap{
+  height: 64px;
+}
+.header-wrap .logo{
+  vertical-align: baseline;
+}
+.hamburger{
+  display : block;
+}
+.breadcrumb{
+  padding: 0 10px;
+  margin-left: 0;
+}
+/* slider
+------------------------------------------------------------*/
+.slider-main-txt {
+  font-size: 46px;
+}
+.slider-sub-txt {
+  font-size: 16px;
+}
+.slider-txt{
+  left: 10px;
+}
+/* news
+------------------------------------------------------------*/
+.news-inner,.news-txt{
+  display: block;
+}
+.news-txt{
+  width: 65%;
+  height: 25px;
+}
+.br::after {
+  content: "\A";
+  white-space: pre;
+}
+.six-pic{
+  flex-wrap: wrap;
+}
+.six-pic01{
+  width: 33.3%;
+}
+/* face-insta
+------------------------------------------------------------*/
+.face-insta-btn{
+  display: block;
+}
+.facebook, .instagram{
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+/* page
+------------------------------------------------------------*/
+.post{
+  padding: 0 10px;
+}
+}
+@media screen and (max-width:540px){
+/* header
+------------------------------------------------------------*/
+.header-wrap .logo{
+  width: 150px;
+}
+nav.globalMenuSp ul li{
+  font-size: 18px;
+}
+/* slider
+------------------------------------------------------------*/
+.slider-main-txt{
+  font-size: 28px;
+}
+.slider-sub-txt{
+  font-size: 14px;
+}
+.slider-wrap img{
+  height: 600px;
+  object-fit: cover;
+}
+.block{
+  display: block;
+}
+/* news
+------------------------------------------------------------*/
+.news-box{
+  margin-left: 0;
+  padding: 0 10px;
+}
+/* about us
+------------------------------------------------------------*/
+.about-inner{
+  padding: 0 10px;
+}
+/* face-insta
+------------------------------------------------------------*/
+.facebook, .instagram{
+  width: 100%;
+}
+.face-insta-btn{
+  padding: 0 10px;
+}
+/* footer
+------------------------------------------------------------*/
+.footer-inner{
+  display: block;
+  position: relative;
+  padding-top: 80px;
+}
+.f-left{
+  text-align: center;
+}
+.hogo-map,.copy{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hogo-map{
+  top: -260px;
+  width: 100%;
+  text-align: center;
+}
+.copy{
+  bottom: -33px;
+  font-size: 11px;
+}
+/* page
+------------------------------------------------------------*/
+.p_slider-main-txt{
+  font-size: 56px;
+  letter-spacing: 4.48px;
+}
+.p_main-visual img{
+  height: 320px;
+}
+}
